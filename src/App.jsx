@@ -6,6 +6,7 @@ import {
   PointerSensor,
   useSensor,
   useSensors,
+  TouchSensor,
 } from '@dnd-kit/core';
 import {
   arrayMove,
@@ -21,7 +22,8 @@ function App() {
     useSensor(PointerSensor),
     useSensor(KeyboardSensor, {
       coordinateGetter: sortableKeyboardCoordinates
-    })
+    }),
+    useSensor(TouchSensor)
   )
 
   useMemo(() => {
